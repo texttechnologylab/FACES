@@ -1,0 +1,108 @@
+# FACES - project website
+# Feasibility, Acceptance, and Data Quality of New Multimodal Surveys
+# DFG 539621548, SPP 2431 "New Data Spaces"
+
+site_name: FACES
+site_url: https://texttechnologylab.github.io/FACES/
+site_description: >-
+  FACES - Feasibility, Acceptance, and Data Quality of New Multimodal Surveys.
+  A multimodal data space for survey research, built on VR- and avatar-based
+  interviews. DFG project 539621548, SPP 2431 New Data Spaces.
+site_author: Text Technology Lab, Goethe University Frankfurt & LIfBi
+copyright: >-
+  Goethe University Frankfurt &middot; Leibniz Institute for Educational Trajectories &middot;
+  Funded by the Deutsche Forschungsgemeinschaft (DFG), project 539621548
+
+repo_url: https://github.com/texttechnologylab/FACES
+repo_name: texttechnologylab/FACES
+edit_uri: ""
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  favicon: assets/logos/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Source Sans 3
+    code: Source Code Pro
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Project: project.md
+  - Deliverables:
+      - deliverables/index.md
+      - InterView: deliverables/interview.md
+      - Va.Si.Li-Lab: deliverables/vasili-lab.md
+      - Infrastructure: deliverables/infrastructure.md
+  - Studies: studies.md
+  - Team: team.md
+  - Publications: publications.md
+
+extra_css:
+  - stylesheets/faces.css
+
+extra:
+  social:
+    - icon: fontawesome/solid/house
+      link: https://www.texttechnologylab.org/
+      name: Text Technology Lab
+    - icon: fontawesome/brands/github
+      link: https://github.com/texttechnologylab
+      name: texttechnologylab on GitHub
+  generator: false
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

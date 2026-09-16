@@ -1,0 +1,735 @@
+/* ==========================================================================
+   FACES - palette and components
+   Institutional colours sampled from the live sites:
+     #004A6F  Goethe-Universitaet corporate design ("Goethe-Blau")
+     #006192  texttechnologylab.org
+     #F0B600  texttechnologylab.org accent
+     #E5007D  lifbi.de primary
+     #4242B1  lifbi.de secondary
+     #F6F3EE / #F3EFE9 / #323637 / #262929  Goethe CD warm neutrals
+   Rule: blue = project / Goethe+TTLab, magenta = LIfBi, gold = interaction.
+   ========================================================================== */
+
+:root {
+  --faces-blue:        #004A6F;
+  --faces-blue-light:  #006192;
+  --faces-blue-pale:   #E3EDF2;
+  --faces-gold:        #F0B600;
+  --faces-gold-soft:   #FDF3D6;
+  --faces-magenta:     #E5007D;
+  --faces-magenta-pale:#FBE4F0;
+  --faces-violet:      #4242B1;
+  --faces-sand:        #F6F3EE;
+  --faces-sand-2:      #F3EFE9;
+  --faces-ink:         #323637;
+  --faces-ink-2:       #262929;
+  --faces-line:        rgba(0, 74, 111, .16);
+}
+
+/* ---------- Material palette bindings: light ---------- */
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        var(--faces-blue);
+  --md-primary-fg-color--light: var(--faces-blue-light);
+  --md-primary-fg-color--dark:  #00374F;
+  --md-primary-bg-color:        #FFFFFF;
+  --md-primary-bg-color--light: rgba(255, 255, 255, .7);
+
+  --md-accent-fg-color:         var(--faces-blue-light);
+  --md-accent-fg-color--transparent: rgba(0, 97, 146, .1);
+  --md-accent-bg-color:         #FFFFFF;
+
+  --md-typeset-a-color:         var(--faces-blue-light);
+  --md-default-bg-color:        #FCFBF9;
+  --md-default-fg-color--light: #5A5F60;
+
+  --faces-surface:  var(--faces-sand);
+  --faces-surface-2:#FFFFFF;
+  --faces-border:   var(--faces-line);
+  --faces-muted:    #5A5F60;
+}
+
+/* ---------- Material palette bindings: dark ---------- */
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #06293B;
+  --md-primary-fg-color--light: var(--faces-blue-light);
+  --md-primary-fg-color--dark:  #041C29;
+  --md-primary-bg-color:        #FFFFFF;
+
+  --md-accent-fg-color:         var(--faces-gold);
+  --md-accent-fg-color--transparent: rgba(240, 182, 0, .12);
+
+  --md-typeset-a-color:         #6FC3E8;
+  --md-default-bg-color:        #1B1E1F;
+  --md-default-fg-color:        #E4E1DC;
+
+  --faces-surface:  #24282A;
+  --faces-surface-2:#1F2223;
+  --faces-border:   rgba(255, 255, 255, .12);
+  --faces-muted:    #A9A9A4;
+  --faces-blue-pale:#123243;
+  --faces-gold-soft:#3A2F0B;
+  --faces-magenta-pale:#3B1128;
+}
+
+/* ---------- Typography ---------- */
+
+.md-typeset h1,
+.md-typeset h2 {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  color: #EDEAE4;
+}
+
+.md-typeset h2 {
+  border-bottom: 2px solid var(--faces-gold);
+  padding-bottom: .3rem;
+  margin-top: 2.2em;
+}
+
+.md-typeset h1 { margin-bottom: .6em; }
+
+/* Active nav tab underlined in gold */
+.md-tabs__link--active { border-bottom: 2px solid var(--faces-gold); }
+
+/* ---------- Lead paragraph ---------- */
+
+.md-typeset .lead {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--faces-muted);
+  max-width: 46em;
+}
+
+/* ==========================================================================
+   Hero (home page)
+   ========================================================================== */
+
+.faces-hero {
+  position: relative;
+  margin: 0;
+  padding: 4.5rem 1.2rem 3.4rem;
+  background-image:
+    linear-gradient(180deg, rgba(0, 42, 63, .84) 0%, rgba(0, 55, 79, .90) 100%),
+    url("../assets/img/faces-scene.png");
+  background-size: cover;
+  background-position: center 42%;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.faces-hero__inner {
+  max-width: 61rem;
+  margin: 0 auto;
+}
+
+.faces-hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .68rem;
+  font-weight: 600;
+  color: var(--faces-gold);
+  margin: 0 0 .7rem;
+}
+
+.faces-hero h1 {
+  font-size: 3.1rem;
+  line-height: 1.05;
+  font-weight: 700;
+  margin: 0 0 .2rem;
+  color: #FFFFFF;
+  letter-spacing: -.02em;
+}
+
+.faces-hero__sub {
+  font-size: 1.28rem;
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 0 0 1.1rem;
+  color: #EAF2F6;
+  max-width: 30em;
+}
+
+.faces-hero__text {
+  font-size: .95rem;
+  line-height: 1.62;
+  color: #CFDDE5;
+  max-width: 40em;
+  margin: 0 0 1.8rem;
+}
+
+.faces-hero__cta { display: flex; flex-wrap: wrap; gap: .7rem; }
+
+.faces-btn {
+  display: inline-block;
+  padding: .62rem 1.35rem;
+  border-radius: 3px;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-decoration: none !important;
+  transition: transform .12s ease, background-color .12s ease;
+}
+
+.faces-btn--primary { background: var(--faces-gold); color: #2A2000 !important; }
+.faces-btn--primary:hover { background: #FFC81F; transform: translateY(-1px); }
+
+.faces-btn--ghost {
+  background: transparent;
+  color: #FFFFFF !important;
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .55);
+}
+.faces-btn--ghost:hover { background: rgba(255, 255, 255, .12); transform: translateY(-1px); }
+
+@media screen and (max-width: 44.98em) {
+  .faces-hero { padding: 3rem 1rem 2.4rem; }
+  .faces-hero h1 { font-size: 2.15rem; }
+  .faces-hero__sub { font-size: 1.05rem; }
+}
+
+/* ==========================================================================
+   Fact strip
+   ========================================================================== */
+
+.faces-facts {
+  background: var(--faces-blue);
+  color: #FFFFFF;
+  padding: 0;
+}
+
+.faces-facts__inner {
+  max-width: 61rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.faces-fact {
+  padding: 1.15rem 1.2rem;
+  border-right: 1px solid rgba(255, 255, 255, .16);
+}
+.faces-fact:last-child { border-right: 0; }
+
+.faces-fact__value {
+  display: block;
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+.faces-fact__value a { color: #FFFFFF !important; text-decoration: none; border-bottom: 1px solid var(--faces-gold); }
+.faces-fact__value a:hover { color: var(--faces-gold) !important; }
+
+.faces-fact__label {
+  display: block;
+  margin-top: .22rem;
+  font-size: .74rem;
+  line-height: 1.35;
+  color: #B9CEDA;
+}
+
+@media screen and (max-width: 59.98em) {
+  .faces-facts__inner { grid-template-columns: repeat(2, 1fr); }
+  .faces-fact:nth-child(2) { border-right: 0; }
+  .faces-fact:nth-child(1), .faces-fact:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,.16); }
+}
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+.faces-section { max-width: 61rem; margin: 0 auto; padding: 2.6rem 1.2rem 0; }
+
+.faces-section__title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  margin: 0 0 .35rem;
+}
+[data-md-color-scheme="slate"] .faces-section__title { color: #EDEAE4; }
+
+.faces-section__intro {
+  color: var(--faces-muted);
+  font-size: .9rem;
+  line-height: 1.6;
+  margin: 0 0 1.4rem;
+  max-width: 44em;
+}
+
+.faces-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+  gap: 1rem;
+}
+
+.faces-card {
+  background: var(--faces-surface);
+  border: 1px solid var(--faces-border);
+  border-top: 3px solid var(--faces-blue);
+  border-radius: 3px;
+  padding: 1.1rem 1.15rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform .13s ease, box-shadow .13s ease, border-top-color .13s ease;
+}
+
+a.faces-card { text-decoration: none !important; color: inherit !important; }
+
+a.faces-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 74, 111, .13);
+  border-top-color: var(--faces-gold);
+}
+
+.faces-card h3 {
+  margin: .1rem 0 .4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  line-height: 1.3;
+}
+[data-md-color-scheme="slate"] .faces-card h3 { color: #EDEAE4; }
+
+.faces-card p {
+  margin: 0;
+  font-size: .82rem;
+  line-height: 1.55;
+  color: var(--faces-muted);
+}
+
+.faces-card__more {
+  margin-top: .75rem;
+  font-size: .76rem;
+  font-weight: 600;
+  color: var(--faces-blue-light);
+}
+[data-md-color-scheme="slate"] .faces-card__more { color: #6FC3E8; }
+
+/* numbered research-question cards */
+.faces-card__num {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--faces-gold);
+}
+
+/* ---------- Status chips ---------- */
+
+.faces-chip {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  padding: .17rem .5rem;
+  border-radius: 2px;
+  margin-bottom: .5rem;
+  white-space: nowrap;
+}
+
+.faces-chip--released { background: var(--faces-blue-pale);    color: var(--faces-blue); }
+.faces-chip--complete { background: var(--faces-blue-pale);    color: var(--faces-blue); }
+.faces-chip--accepted { background: var(--faces-gold-soft);    color: #7A5C00; }
+.faces-chip--review   { background: var(--faces-magenta-pale); color: #A1005A; }
+.faces-chip--ongoing  { background: var(--faces-magenta-pale); color: #A1005A; }
+.faces-chip--planned  { background: rgba(128,128,128,.14);     color: var(--faces-muted); }
+
+[data-md-color-scheme="slate"] .faces-chip--released,
+[data-md-color-scheme="slate"] .faces-chip--complete { color: #8FCDE8; }
+[data-md-color-scheme="slate"] .faces-chip--accepted { color: #F0C64A; }
+[data-md-color-scheme="slate"] .faces-chip--review,
+[data-md-color-scheme="slate"] .faces-chip--ongoing  { color: #F58FC0; }
+
+/* inline chips inside prose tables */
+.md-typeset .faces-chip { margin-bottom: 0; }
+
+/* ==========================================================================
+   Headline stat band
+   ========================================================================== */
+
+.faces-band {
+  margin-top: 2.8rem;
+  background: var(--faces-sand-2);
+  border-top: 1px solid var(--faces-border);
+  border-bottom: 1px solid var(--faces-border);
+  padding: 2.2rem 1.2rem;
+}
+[data-md-color-scheme="slate"] .faces-band { background: #202425; }
+
+.faces-band__inner { max-width: 61rem; margin: 0 auto; }
+
+.faces-band__number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--faces-blue);
+  letter-spacing: -.02em;
+}
+[data-md-color-scheme="slate"] .faces-band__number { color: #6FC3E8; }
+
+.faces-band__text {
+  margin: .5rem 0 0;
+  font-size: .93rem;
+  line-height: 1.6;
+  color: var(--faces-muted);
+  max-width: 44em;
+}
+
+/* ==========================================================================
+   Team
+   ========================================================================== */
+
+.faces-team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.1rem;
+  margin: 1.4rem 0 1rem;
+}
+
+.faces-person {
+  background: var(--faces-surface);
+  border: 1px solid var(--faces-border);
+  border-left: 3px solid var(--faces-blue);
+  border-radius: 3px;
+  padding: 1.1rem 1rem;
+  text-align: center;
+}
+
+.faces-person.is-lifbi { border-left-color: var(--faces-magenta); }
+
+.faces-person__photo,
+.faces-person__mono {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  margin: 0 auto .7rem;
+  display: block;
+  object-fit: cover;
+}
+
+.faces-person__mono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: #FFFFFF;
+  background: var(--faces-blue);
+  border: 2px dashed rgba(255, 255, 255, .45);
+}
+.faces-person.is-lifbi .faces-person__mono { background: var(--faces-magenta); }
+
+.faces-person__name {
+  font-size: .88rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--md-default-fg-color);
+  margin: 0 0 .18rem;
+}
+
+.faces-person__role {
+  font-size: .76rem;
+  font-weight: 600;
+  color: var(--faces-blue-light);
+  margin: 0 0 .12rem;
+}
+.faces-person.is-lifbi .faces-person__role { color: var(--faces-magenta); }
+[data-md-color-scheme="slate"] .faces-person__role { color: #6FC3E8; }
+[data-md-color-scheme="slate"] .faces-person.is-lifbi .faces-person__role { color: #F58FC0; }
+
+.faces-person__affil {
+  font-size: .72rem;
+  line-height: 1.4;
+  color: var(--faces-muted);
+  margin: 0 0 .55rem;
+}
+
+.faces-person__links a {
+  font-size: .7rem;
+  margin: 0 .28rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Logos, funder strip, placeholders
+   ========================================================================== */
+
+.faces-funders {
+  background: var(--faces-sand-2);
+  border-top: 1px solid var(--faces-border);
+  padding: 1.8rem 1.2rem;
+}
+[data-md-color-scheme="slate"] .faces-funders { background: #202425; }
+
+.faces-funders__inner { max-width: 61rem; margin: 0 auto; }
+
+.faces-funders__label {
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--faces-muted);
+  margin: 0 0 1rem;
+}
+
+.faces-funders__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.6rem 2.2rem;
+}
+
+.faces-funders__row img {
+  max-height: 54px;
+  width: auto;
+  display: block;
+}
+
+/* Institutional logos are dark-on-transparent PNGs; give them a light plate in
+   dark mode so they stay legible instead of disappearing into the ground. */
+[data-md-color-scheme="slate"] .faces-funders__row img {
+  background: #FFFFFF;
+  padding: .45rem .6rem;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   Inline bar chart - for small distributions where a matplotlib export would
+   be heavier and less legible than markup. Theme-aware by construction.
+   ========================================================================== */
+
+.faces-bars {
+  margin: 1.6em 0;
+  background: var(--faces-surface-2);
+  border: 1px solid var(--faces-border);
+  border-radius: 3px;
+  padding: 1.1rem 1.2rem .9rem;
+}
+
+.faces-bars__title {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+  margin: 0 0 .9rem;
+}
+
+.faces-bar {
+  display: grid;
+  grid-template-columns: minmax(7rem, 12rem) 1fr auto;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: .55rem;
+}
+
+.faces-bar__label {
+  font-size: .76rem;
+  line-height: 1.3;
+  color: var(--faces-muted);
+  text-align: right;
+}
+
+.faces-bar__label b {
+  display: block;
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+.faces-bar__track {
+  height: 1.5rem;
+  background: var(--faces-blue-pale);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.faces-bar__fill {
+  height: 100%;
+  background: var(--faces-blue);
+  border-radius: 2px 0 0 2px;
+}
+
+[data-md-color-scheme="slate"] .faces-bar__fill { background: #2E88B5; }
+
+.faces-bar--accent .faces-bar__fill { background: var(--faces-gold); }
+
+.faces-bar__value {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+  font-variant-numeric: tabular-nums;
+  min-width: 3.2rem;
+  text-align: right;
+}
+
+.faces-bars__note {
+  margin: .9rem 0 0;
+  padding-top: .7rem;
+  border-top: 1px solid var(--faces-border);
+  font-size: .74rem;
+  line-height: 1.55;
+  color: var(--faces-muted);
+}
+
+@media screen and (max-width: 44.98em) {
+  .faces-bar { grid-template-columns: 1fr auto; }
+  .faces-bar__label { grid-column: 1 / -1; text-align: left; }
+}
+
+/* Placeholder treatment - deliberately visible, never broken.
+   Delete .logo--placeholder from the markup when the real file lands. */
+.logo--placeholder {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: .5rem .9rem;
+  border: 1.5px dashed var(--faces-blue-light);
+  border-radius: 3px;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent, transparent 7px,
+    rgba(0, 97, 146, .05) 7px, rgba(0, 97, 146, .05) 14px
+  );
+  color: var(--faces-blue-light);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-align: center;
+  line-height: 1.3;
+}
+[data-md-color-scheme="slate"] .logo--placeholder { color: #6FC3E8; border-color: #6FC3E8; }
+
+.logo--placeholder small {
+  display: block;
+  font-weight: 400;
+  font-size: .62rem;
+  opacity: .75;
+  letter-spacing: 0;
+}
+
+/* Inline brand lockup used in page headers */
+.faces-brand {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  margin: 0 0 1.4rem;
+}
+.faces-brand img { height: 62px; width: auto; }
+.faces-brand .logo--placeholder { min-height: 62px; }
+
+/* Brand marks are typically dark-on-transparent; give them a light plate in
+   dark mode so they stay legible instead of blending into the page. */
+[data-md-color-scheme="slate"] .faces-brand img {
+  background: #FFFFFF;
+  padding: .4rem .6rem;
+  border-radius: 3px;
+}
+
+/* Photo placeholder, for a screenshot that does not exist yet. Same visible,
+   never broken treatment as .logo--placeholder, sized like an image instead of
+   a logo. Sits inside a <figure markdown> alongside a normal <figcaption> so it
+   picks up the figure/figcaption box and caption rules below. */
+.img-placeholder {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+  border: 1.5px dashed var(--faces-blue-light);
+  border-radius: 2px;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent, transparent 7px,
+    rgba(0, 97, 146, .05) 7px, rgba(0, 97, 146, .05) 14px
+  );
+  color: var(--faces-blue-light);
+  font-size: .82rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+}
+.img-placeholder small {
+  display: block;
+  margin-top: .15rem;
+  font-weight: 400;
+  font-size: .7rem;
+  opacity: .75;
+}
+[data-md-color-scheme="slate"] .img-placeholder { color: #6FC3E8; border-color: #6FC3E8; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+.md-typeset figure {
+  margin: 1.6em 0;
+  background: var(--faces-surface-2);
+  border: 1px solid var(--faces-border);
+  border-radius: 3px;
+  padding: .9rem;
+}
+
+.md-typeset figure img { display: block; margin: 0 auto; border-radius: 2px; }
+
+.md-typeset figcaption {
+  margin-top: .75rem;
+  padding-top: .6rem;
+  border-top: 1px solid var(--faces-border);
+  font-size: .76rem;
+  line-height: 1.55;
+  color: var(--faces-muted);
+  text-align: left;
+  max-width: none;
+}
+
+.md-typeset figcaption strong { color: var(--md-default-fg-color); }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+.md-typeset table:not([class]) { font-size: .76rem; border-radius: 3px; }
+
+.md-typeset table:not([class]) th {
+  background: var(--faces-blue);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:hover { background: var(--faces-blue-pale); }
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover { background: #202b31; }
+
+/* ==========================================================================
+   Misc
+   ========================================================================== */
+
+/* Institution tag used inline in prose */
+.faces-tag {
+  display: inline-block;
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  padding: .1rem .4rem;
+  border-radius: 2px;
+  vertical-align: .08em;
+}
+.faces-tag--gu    { background: var(--faces-blue-pale);     color: var(--faces-blue); }
+.faces-tag--lifbi { background: var(--faces-magenta-pale);  color: #A1005A; }
+[data-md-color-scheme="slate"] .faces-tag--gu    { color: #8FCDE8; }
+[data-md-color-scheme="slate"] .faces-tag--lifbi { color: #F58FC0; }
+
+/* Home page: no article padding above the hero */
+/* Wide content scrolls inside its own box, never the page body */
+.md-typeset .scrollable { overflow-x: auto; }
+.md-typeset .scrollable > table { margin: 0; }

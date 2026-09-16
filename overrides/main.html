@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+<!--
+  FACES site shell.
+  Adds the partners & funding strip above Material's own footer, so it appears
+  on every page. Logo slots are placeholders until the real marks are dropped in
+  at docs/assets/logos/ - see overrides/partials/funders.html.
+-->
+
+{% block footer %}
+  {% include "partials/funders.html" %}
+  {{ super() }}
+{% endblock %}

@@ -6,15 +6,16 @@ that turns a recorded interview into an analysable dataset.
 
 ## Janus-Gateway
 
-<div class="faces-brand">
-  <img src="../assets/logos/janus-logo.png" alt="Janus WebRTC Server">
+<div class="faces-brand" markdown>
+  ![Janus WebRTC Server](../assets/logos/janus.png)
   <div markdown>
 
-A pinned, reproducible container build of the
+**A pinned, reproducible container build of the
 [Janus WebRTC Server](https://janus.conf.meetecho.com/) with layered
-configuration.
+configuration.**
 [:material-github: Repository](https://github.com/texttechnologylab/Janus-Gateway) ·
 [:material-book-open-variant: Documentation](https://texttechnologylab.github.io/Janus-Gateway/)
+
   </div>
 </div>
 

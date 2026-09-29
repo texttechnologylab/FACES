@@ -1,6 +1,6 @@
 # Va.Si.Li-Lab
 
-<div class="faces-brand">
+<div class="faces-brand" markdown>
   <span class="logo--placeholder">Va.Si.Li-Lab<small>logo in design</small></span>
   <div markdown>
 

@@ -1,6 +1,6 @@
 # InterView
 
-<div class="faces-brand">
+<div class="faces-brand" markdown>
   <span class="logo--placeholder">InterView<small>logo placeholder</small></span>
   <div markdown>
 

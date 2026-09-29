@@ -14,7 +14,8 @@ entries are taken from the
 **Patrick Schrottenbacher, Alexander Mehler, Giuseppe Abrami, Lydia Kleine and
 Doris Stingl** (2026). Submitted to the
 [International Journal of Human-Computer Studies](https://www.sciencedirect.com/journal/international-journal-of-human-computer-studies)
-(Elsevier).
+(Elsevier). Preprint on SSRN:
+[doi:10.2139/ssrn.7459949](https://doi.org/10.2139/ssrn.7459949).
 
 The system paper: the requirements for a flexible, accessible interview
 environment; the architecture; and the evaluation study of 27 VR interviews
@@ -24,9 +25,22 @@ questionnaire items, multimodal recordings and contextual signals as nodes,
 their temporal and behavioural relations as typed links, rather than as
 isolated question–answer pairs with metadata attached.
 
-!!! note "Citation pending"
-    This entry will be replaced with the published citation once it appears. In
-    the meantime, cite the framework: see [How to cite](#how-to-cite).
+??? note "BibTeX"
+
+    ```bibtex
+    @misc{Schrottenbacher:et:al:2026:c,
+      author       = {Schrottenbacher, Patrick and Mehler, Alexander and Abrami, Giuseppe
+                      and Kleine, Lydia and Stingl, Doris},
+      title        = {{InterView}: Towards a Unified {VR}-Capable Interview Environment},
+      year         = {2026},
+      howpublished = {SSRN preprint},
+      doi          = {10.2139/ssrn.7459949},
+      url          = {https://ssrn.com/abstract=7459949},
+      keywords     = {Virtual Reality, Extended reality, Survey interviews,
+                      Interview systems, Multimodality, FACES},
+      note         = {Under review}
+    }
+    ```
 
 ---
 

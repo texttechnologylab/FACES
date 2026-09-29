@@ -132,7 +132,7 @@ in Bamberg.
       <h3>InterView paper</h3>
       <p><em>Towards a Unified VR-Capable Interview Environment</em>: the system,
       its data model, and the evaluation study. Under review at IJHCS
-      (Elsevier).</p>
+      (Elsevier); preprint on SSRN.</p>
       <span class="faces-card__more">Publication &rarr;</span>
     </a>
 

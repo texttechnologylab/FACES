@@ -13,6 +13,10 @@ copyright: >-
   Goethe University Frankfurt &middot; Leibniz Institute for Educational Trajectories &middot;
   Funded by the Deutsche Forschungsgemeinschaft (DFG), project 539621548
 
+# live-reload when scripts/build_figures.py regenerates the figures
+watch:
+  - includes
+
 repo_url: https://github.com/texttechnologylab/FACES
 repo_name: texttechnologylab/FACES
 edit_uri: ""
@@ -95,7 +99,10 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.caret
   - pymdownx.tilde
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      # generated figures: includes/figures/, built by scripts/build_figures.py
+      base_path: [includes]
+      check_paths: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

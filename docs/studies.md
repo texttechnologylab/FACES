@@ -21,7 +21,7 @@ they were chosen to span most of the preference range, so that avatar effects
 could be looked for at all.
 
 <figure markdown>
-  ![The four selected avatars (sunglasses, headscarf, blue hair, striped jumper), each with bars showing its percentile among the twenty on preference, trust, comfort and similarity](assets/figures/fig_prestudy_selected.png){ loading=lazy }
+--8<-- "figures/prestudy_selected.html"
   <figcaption>
     <strong>The four carried forward.</strong> Percentile among the twenty on
     each construct. The sunglasses avatar is last of twenty on both trust and
@@ -50,7 +50,7 @@ experimental contrast: **neutral** (Q~N~) and **discomfort-inducing** (Q~D~).
 ### What the instrument captured
 
 <figure markdown>
-  ![Three panels: records stored per modality on a log scale, a histogram of effective gaze sampling rate centred on 18.5 Hz, and gaze yield against session duration](assets/figures/fig_capture_overview.png){ loading=lazy }
+--8<-- "figures/capture_overview.html"
   <figcaption>
     <strong>Measured, not specified.</strong> Records per modality; the
     <em>effective</em> gaze sampling rate across 27 interviewee streams, read
@@ -59,12 +59,7 @@ experimental contrast: **neutral** (Q~N~) and **discomfort-inducing** (Q~D~).
   </figcaption>
 </figure>
 
-| | | | |
-|---|---|---|---|
-| Valid interviews | **27** (of 34 recorded) | Total records stored | **4,567,743** |
-| Total interview time | 15.7 h | Median gaze rate | **18.5 Hz** |
-| Eye / body / head records | 1,496,517 each | Capture duty cycle | **0.966** |
-| Transcribed words | 57,971 | Gaze in reference view | 97.0 % |
+--8<-- "figures/capture_stats.html"
 
 A duty cycle of 0.966 means capture is continuous for essentially the whole
 session. This is the claim everything else rests on, and the one we can make
@@ -73,7 +68,7 @@ most firmly.
 ### Acceptance
 
 <figure markdown>
-  ![Diverging stacked Likert chart of the post-interview experience items, with means and n per item](assets/figures/fig_likert_experience.png){ loading=lazy }
+--8<-- "figures/likert_experience.html"
   <figcaption>
     <strong>Post-interview self-report.</strong> Discomfort and dizziness are at
     the floor (M = 1.48 and 1.39), willingness to take part again near the
@@ -90,33 +85,15 @@ most firmly.
 elsewhere.** The answer options were displayed on the desk panel, numbered, and
 never read aloud.
 
-<div class="faces-bars">
-  <p class="faces-bars__title">How participants voiced a scale answer</p>
-  <div class="faces-bar faces-bar--accent">
-    <span class="faces-bar__label"><b>Bare index</b>"three"</span>
-    <span class="faces-bar__track"><span class="faces-bar__fill" style="width:100%"></span></span>
-    <span class="faces-bar__value">36.3 %</span>
-  </div>
-  <div class="faces-bar">
-    <span class="faces-bar__label"><b>Full scale label</b>"rather good"</span>
-    <span class="faces-bar__track"><span class="faces-bar__fill" style="width:89.8%"></span></span>
-    <span class="faces-bar__value">32.6 %</span>
-  </div>
-  <div class="faces-bar">
-    <span class="faces-bar__label"><b>Both</b>index and label</span>
-    <span class="faces-bar__track"><span class="faces-bar__fill" style="width:12.1%"></span></span>
-    <span class="faces-bar__value">4.4 %</span>
-  </div>
-  <div class="faces-bar">
-    <span class="faces-bar__label"><b>Neither</b>paraphrase or other</span>
-    <span class="faces-bar__track"><span class="faces-bar__fill" style="width:73.8%"></span></span>
-    <span class="faces-bar__value">26.8 %</span>
-  </div>
-  <p class="faces-bars__note">
-    Resolved against each item's actual response-option catalogue rather than a
-    single hard-coded five-point vocabulary. Bar length is proportional to share.
-  </p>
-</div>
+<figure markdown>
+--8<-- "figures/answer_format.html"
+  <figcaption>
+    <strong>How participants voiced a scale answer.</strong> Share of spoken
+    answers to scale items, resolved against each item's actual
+    response-option catalogue rather than a single hard-coded five-point
+    vocabulary.
+  </figcaption>
+</figure>
 
 Two things follow. Since the indices were only ever *visible*, a participant
 could produce one only by reading the panel and folding it into their answer:

@@ -31,41 +31,6 @@ elsewhere:
 | [Va.Si.Li-Lab-backend](https://github.com/texttechnologylab/Va.Si.Li-Lab-backend) | Logging API, Ubiq room server, chatbot and speech services |
 | [Janus-Gateway](https://github.com/texttechnologylab/Janus-Gateway) | Pinned, reproducible Janus WebRTC image |
 
-## Building the site locally
-
-```bash
-pip install mkdocs-material
-mkdocs serve          # http://127.0.0.1:8000
-mkdocs build --strict # what CI runs
-```
-
-Pushing to `main` builds the site and deploys it to the `gh-pages` branch via
-[GitHub Actions](.github/workflows/mkdocs.yml).
-
-## Layout
-
-```
-mkdocs.yml                     site configuration
-overrides/
-  main.html                    shell; adds the partners & funding strip
-  home.html                    landing page: hero + fact strip
-  partials/funders.html        funder logo slots
-docs/
-  index.md                     home
-  project.md                   description, requirements (A)-(G) and their status
-  deliverables/                InterView, Va.Si.Li-Lab, infrastructure
-  studies.md                   the two completed studies and their results
-  team.md                      team grid
-  publications.md              citations and BibTeX
-  stylesheets/faces.css        FACES palette and components
-  assets/                      screenshots, figures, portraits, logos
-```
-
-## Placeholders
-
-Logo slots and team portraits currently render **visible placeholders**: see
-[LOGOS.md](LOGOS.md) for how to swap in real files. Nothing renders broken, and
-nothing ships to a reviewer by accident.
 
 ## Citation
 

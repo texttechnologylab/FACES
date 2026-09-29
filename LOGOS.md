@@ -36,7 +36,7 @@ When the last placeholder is gone, the `.logo--placeholder` and
 | `faces-full.png` | Full FACES lockup (wordmark + icon + tagline) | **Added**, not yet placed anywhere on the site; the header still shows the site name as plain text. Two lines of small tagline text make it too detailed for a compact header logo; better suited to something like the README or a print piece. |
 | `vasili-lab.svg` | Va.Si.Li-Lab | **Being designed** |
 | `interview.svg` | InterView | Placeholder |
-| `goethe.svg` | Goethe University Frankfurt | Needs official file |
+| `goethe.svg` | Goethe University Frankfurt | **Added** |
 | `ttlab.png` | Text Technology Lab | **Added** |
 | `lifbi.png` | LIfBi | **Added** |
 | `dfg.jpg` | Deutsche Forschungsgemeinschaft | **Added** |

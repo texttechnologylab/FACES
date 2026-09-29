@@ -81,15 +81,17 @@ items, multimodal recordings and contextual signals are nodes, and their
 temporal and behavioural relations are links.
 
 <figure markdown>
-  ![The InterView data model: six groups of linked entities (session, per-frame, media, language, instrument and self-report), annotated with the number of records actually stored in each](../assets/figures/fig_data_model.png){ loading=lazy }
+--8<-- "figures/data_model.html"
   <figcaption>
-    <strong>The data model, with the records actually stored.</strong> Six
-    entity groups, 4,567,743 records, from the 27 interviews of the evaluation
-    study. Eye, body and head are sampled per frame at 1,496,517 records each;
-    57,971 transcribed words link to 14,753 audio chunks; 1,512 question windows
-    tie the questionnaire to the timeline; 3,537 survey answers close the loop
-    to self-report. Every count in this diagram is read out of the live
-    database, not estimated.
+    <strong>The data model, with the records actually stored.</strong>
+    4,567,743 records in thirteen tables across two databases, from the 27
+    interviews of the evaluation study. Everything captured on the session
+    clock lives in the timeseries database: eye, body and head at one record
+    per frame (1,496,517 each), and 57,971 words transcribed from 14,753 audio
+    chunks. The questionnaire lives in the base database, and two links cross
+    over: 1,512 question windows place each item on the interview timeline, and
+    27 survey responses (3,537 answers) tie self-report to the same session.
+    Every count is read out of the live database, not estimated.
   </figcaption>
 </figure>
 

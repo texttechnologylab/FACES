@@ -245,7 +245,7 @@ Grouped, newest first, each with an abstract-length summary, links (DOI / publis
 
 **FACES output**
 
-1. **Schrottenbacher, Mehler, Abrami, Kleine & Stingl (2026).** *INTERVIEW: Towards a Unified VR-Capable Interview Environment.* Under review (Elsevier). — ⚠️ the BibTeX in the InterView README has a placeholder DOI (`10.2139/ssrn.XXXXXXX`); needs the real SSRN ID, or the entry should say "under review" with no DOI.
+1. **Schrottenbacher, Mehler, Abrami, Kleine & Stingl (2026).** *INTERVIEW: Towards a Unified VR-Capable Interview Environment.* Under review (Elsevier). Preprint: SSRN, doi:10.2139/ssrn.7459949. — ⚠️ the BibTeX in the InterView README still has the placeholder DOI (`10.2139/ssrn.XXXXXXX`); replace with `10.2139/ssrn.7459949`.
 2. **Schrottenbacher, Mehler, Bernhardt, Rohe & Abrami (2026).** *ReEmote: Towards Emotion Representation in VR Through Va.Si.Li-Lab.* Proceedings of XR Salento 2026, Springer LNCS. **Accepted.**
 
 **Framework foundations**
@@ -263,6 +263,8 @@ Bottom: a **"How to cite the platform"** box giving the one BibTeX entry someone
 ## 5. Figures — from `analysis_2026`
 
 Source: `D:\repos\icids_cwhisper\analysis_2026\figures\` (PNG + PDF of each). Publication-quality matplotlib, already legible at web width. **Copy the PNGs into `docs/assets/figures/`** — do not reference the analysis repo by path, and do not vendor the whole directory; only the shortlist below.
+
+> **Update (2026-09-28):** the data model, capture overview, Likert, answer-format and pre-study figures are no longer PNGs. `scripts/build_figures.py` renders them as theme-aware HTML/SVG from the analysis *tables* into `includes/figures/` (see README). The data model is now a two-database entity diagram with the real foreign keys. Only `fig_interview_timeline.png` is still copied as an image.
 
 ### 5.1 Shortlist
 
@@ -309,7 +311,7 @@ The figures use matplotlib's default blue/orange. Recolouring to `--faces-blue` 
 - `Assets/Screenshot 2026-09-03 151646.png` — third-person room
 - `Assets/Screenshot 2026-09-03 151451.png` — gaze heat map
 - `analysis_2026/figures/*.png` — the shortlist in §5.1
-- `Assets/IJHCS___InterView-2.pdf` — source text; not published on the site until a preprint URL exists
+- `Assets/IJHCS___InterView-2.pdf` — source text; not published on the site; the SSRN preprint (https://ssrn.com/abstract=7459949) is linked instead
 
 ### 6.2 Logo placeholders
 
@@ -476,7 +478,7 @@ My numbers here come from `pdftotext`; some glyphs were mangled in extraction (�
 ### 8.2 Other items
 
 1. **`VR-SUITE` vs `Va.Si.Li-Lab`.** The IJHCS draft calls the framework **VR-SUITE** throughout; every repository, doc site and prior paper calls it **Va.Si.Li-Lab**. Either the draft is anonymised for review, or a rename is underway. The site must pick one — please confirm. *This one now also gates the logo:* a mark you are about to design should carry the name the project intends to keep. (Default if unanswered: **Va.Si.Li-Lab**.)
-2. **InterView preprint DOI** — placeholder `10.2139/ssrn.XXXXXXX` needs the real SSRN ID, or the citation reads "under review" with no DOI.
+2. **InterView preprint DOI** — resolved on the site (`10.2139/ssrn.7459949`); the InterView repo README still needs the same fix.
 3. **MongoDB or SurrealDB?** The InterView docs and backend README say tracking data goes to **MongoDB**; `analysis_2026/INTEGRATION.md` builds its cache from **SurrealDB**. Both may be true at different points in the stack's history, but the website should not say one thing while the docs say another.
 4. **Ali Zandian Ghahfarokhi** — listed on the LIfBi page but not in your team selection. Contributors line, or omit?
 5. **NEPS validation stage** — under way or still upcoming? Determines whether it appears under "Delivered" or "In progress". I will not overstate it.

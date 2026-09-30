@@ -85,7 +85,7 @@ with no headset at all. It was not part of the published evaluation study, but
 it is the interface actually in use right now.
 
 <figure markdown>
-<div class="img-placeholder" markdown>Screenshot placeholder<br><small>InterView-W browser client</small></div>
+  ![InterView-W, the browser client: the interview interface running in an ordinary web browser](../assets/img/faces-website.png){ loading=lazy }
   <figcaption>
     <strong>The browser client.</strong> Device selection, live chat,
     questionnaire and recording control, usable from a laptop with no VR

@@ -178,7 +178,7 @@ are complete; validation with former [NEPS](https://www.neps-data.de/) panel
 participants is now under way.
 
 <figure markdown>
-<div class="img-placeholder" markdown>Screenshot placeholder<br><small>InterView-W, the browser client</small></div>
+  ![InterView-W, the browser client: the interview interface running in an ordinary web browser](assets/img/faces-website.png){ loading=lazy }
   <figcaption>
     <strong>Not headset only.</strong> Everything above describes the VR side.
     InterView also runs entirely in an ordinary browser, with no headset

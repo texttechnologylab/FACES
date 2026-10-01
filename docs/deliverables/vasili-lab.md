@@ -1,7 +1,7 @@
 # Va.Si.Li-Lab
 
 <div class="faces-brand" markdown>
-  <span class="logo--placeholder">Va.Si.Li-Lab<small>logo in design</small></span>
+  ![Va.Si.Li-Lab](../assets/logos/vasili-lab.svg)
   <div markdown>
 
 **A VR lab for simulation-based learning,** and the framework InterView is
